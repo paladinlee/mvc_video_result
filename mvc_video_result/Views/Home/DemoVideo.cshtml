@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "DemoVideo";
+}
+
+<h2>DemoVideo</h2>
+<div>
+    <video controls="controls">
+        <source src=@Url.Action("DemoVideo","Home") type="video/mp4" />
+    </video>
+</div>
+
