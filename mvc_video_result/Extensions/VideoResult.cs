@@ -21,6 +21,9 @@ namespace mvc_video_result.Extensions
                 throw new ArgumentException("忘了檔案名稱?",fileName);
             }
 
+            //HostingEnvironment.MapPath() 與 Server.MapPath() 效果一樣，
+            //但如過將來不是部署在 IIS 上，HostingEnvironment 會更有彈性
+
             //副檔名確認
             string filePath = HostingEnvironment.MapPath("~/Videos/"+fileName);
             string fileExtension = Path.GetExtension(filePath).ToLower();
